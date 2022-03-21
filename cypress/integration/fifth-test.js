@@ -1,6 +1,5 @@
-
-describe('The Oscars awards', () => {
-    it('Create watchlist', () => {
+describe('Awards and events', () => {
+    it('Find awards and events', () => {
     cy
     .visit('https://www.imdb.com/')
 
@@ -18,33 +17,6 @@ describe('The Oscars awards', () => {
     .should('have.length', 1)
     .first()
     .click()
-
-    .get('.nominees-widget__title')
-    .should('have.text', 'The 94th Annual Academy Awards')
-
-    //Best Movies assertions
-    .get(':nth-child(1) > .event-widgets__award-categories > :nth-child(1) > .event-widgets__award-category-name')
-    .should('have.text', 'Best Motion Picture of the Year')
-
-    .get(':nth-child(1) > .event-widgets__award-categories > :nth-child(1) > .event-widgets__award-category-nominations > :nth-child(1) > :nth-child(1) > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'Belfast')
-
-    .get(':nth-child(1) > .event-widgets__award-categories > :nth-child(1) > .event-widgets__award-category-nominations > :nth-child(1) > :nth-child(2) > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'CODA')
-
-    //Best Actor assertions
-    .get(':nth-child(2) > .event-widgets__award-category-nominations > :nth-child(2) > :nth-child(1) > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'Denzel Washington')
-
-    .get(':nth-child(2) > .event-widgets__award-category-nominations > :nth-child(3) > .event-widgets__award-nomination > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'Will Smith')
-
-    //Best Actress assertions
-    .get(':nth-child(3) > .event-widgets__award-category-nominations > :nth-child(3) > .event-widgets__award-nomination > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'Penélope Cruz')
-
-    .get(':nth-child(3) > .event-widgets__award-category-nominations > :nth-child(1) > :nth-child(1) > .event-widgets__nomination-details > .event-widgets__nominees > .event-widgets__primary-nominees > :nth-child(1) > .event-widgets__nominee-name > a')
-    .should('have.text', 'Jessica Chastain')
 
 
 })
