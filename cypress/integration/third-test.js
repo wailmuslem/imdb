@@ -33,11 +33,7 @@ it('Search engine', () => {
   .first()
   .should('have.text', '"Die Hard"')
 
-  cy.get('._3x17Igk9XRXcaKrcG3_MXQ > .FlyoutMenu-sc-xq6xx0-0 > .ipc-button > .ipc-button__text > #iconContext-arrow-drop-down')
-  .click()
 
-  cy.get('.imdb-header-account-menu__sign-out > .ipc-list-item__text')
-  .click()
 
 
 })
